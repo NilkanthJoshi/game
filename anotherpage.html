@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Another Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Another Page!</h1>
+
+    <!-- Button to navigate back to index.html -->
+    <button onclick="goToIndex()">Go Back to Guessing Game</button>
+
+    <!-- Button to change color -->
+    <button onclick="changeBackgroundColor()">Change Background Color</button>
+
+    <script>
+        // Function to navigate back to index.html
+        function goToIndex() {
+            window.location.href = 'index.html'; // Change to your target file
+        }
+
+        // Function to change the background color to one of seven colors
+        function changeBackgroundColor() {
+            const colors = ['#FF5733', '#33FF57', '#3357FF', '#F5FF33', '#FF33F5', '#33FFF5', '#F533FF'];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            document.body.style.backgroundColor = randomColor;
+        }
+    </script>
+</body>
+</html>
